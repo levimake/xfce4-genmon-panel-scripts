@@ -20,7 +20,7 @@ With XFCE4, you can do rice your panels like they do in Polybar, i3wm etc. GenMo
 
 ### Required add-ons
 
-- xdotool
+- xdotool (for the window title, minimize and close button's function to work)
 - nerd-fonts
 
 ### Additional Tweaks
