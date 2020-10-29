@@ -1,0 +1,60 @@
+@import 'colors.css';
+
+#whiskermenu-button label {
+    color: #5294E2;
+    font-weight: bold; 
+    font-size: 20px;
+}
+
+#whiskermenu-button label:hover {
+ color:#fff;
+}
+
+#pager-2 #xfce-panel-toggle-button:checked {
+	color: #89C1D1;
+	background-color: #414b5e;
+}
+
+#pager-2 #xfce-panel-toggle-button:hover {
+	color: #c0616a;
+	background-color: #414b5e;
+}
+
+
+
+#pager-2 .horizontal {
+	border-radius: 15px;
+	color: #fff;
+	background-color: #414b5e;
+	margin: 7px;
+	margin-left: 3px;
+	margin-right: 3px;
+        padding: 10px;
+        border-radius:15px;
+        font-size: 20px;
+}
+
+#showdesktop-button{
+	padding-left: 2px;
+	padding-top: 2px;
+	color: #fff;
+	background-color: #414b5e;
+	border-radius: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 7px;
+}
+
+
+.genmon_valuebutton, .genmon_value, #showdesktop-button{
+	padding-left: 2px;
+	padding-top: 2px;
+	color: #fff;
+	background-color: #414b5e;
+	border-radius: 20px;
+    padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 7px;
+}
+
