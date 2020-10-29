@@ -1,4 +1,4 @@
-# xfce4-genmon-panel-rices
+# xfce4-genmon-panel-scripts
 
 With XFCE4, you can do rice your panels like they do in Polybar, i3wm etc. GenMon is a plugin from XFCE which helps you run bash scripts as a widget on the panel. By utilizing this widget, ricing the panel becomes real fun.
 
