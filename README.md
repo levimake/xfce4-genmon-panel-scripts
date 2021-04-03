@@ -6,9 +6,9 @@ With XFCE4, you can do rice your panels like they do in Polybar, i3wm etc. GenMo
 
 ## Style 1
 
-![](https://github.com/levimake/xfce4-genmon-panel-scripts/blob/main/screenshots/panel1-a.png)
+![](https://github.com/levimake/xfce4-genmon-panel-scripts/blob/main/screenshots/style1/panel1-a.png)
 
-![](https://github.com/levimake/xfce4-genmon-panel-scripts/blob/main/screenshots/panel1-b.png)
+![](https://github.com/levimake/xfce4-genmon-panel-scripts/blob/main/screenshots/style1/panel1-b.png)
 
 ## Style 2
 
