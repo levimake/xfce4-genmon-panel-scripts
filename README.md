@@ -61,5 +61,5 @@ GTK_DEBUG = interactive xfce4-panel
  
  #### References
  See [xfce4-genmon-scripts](https://github.com/xtonousou/xfce4-genmon-scripts) by [xtonousou](https://github.com/xtonousou)
- [xfce4-genmon css styling](https://git.xfce.org/panel-plugins/xfce4-genmon-plugin/tree/CSS%20Styling.txt)
- [xfce4 genmon plugin usage - xfce4 docs](https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin/start#usage)
+ - [xfce4-genmon css styling](https://git.xfce.org/panel-plugins/xfce4-genmon-plugin/tree/CSS%20Styling.txt)
+ - [xfce4 genmon plugin usage - xfce4 docs](https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin/start#usage)
