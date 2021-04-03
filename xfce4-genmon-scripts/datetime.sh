@@ -3,10 +3,10 @@
 #genmon script for displaying the time
 #displays date and time on the tooltip
 
-TIME=$(echo "\uf64f ")
+TIME=$(echo "\ue383 ")
 DATE=$(echo "\uf073 ")
 DATE+=`date '+ %d %B %A %H:%M'`
-TIME+=`date +"%H:%M"`
+TIME+=`date '+%H:%M'`
 
 # Panel
 INFO="<txt>"

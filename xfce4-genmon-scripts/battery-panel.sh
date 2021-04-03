@@ -11,15 +11,15 @@ LOW_BATTERY=25;
 
 INFO=
 if [ "${BATTERY}" -lt "${LOW_BATTERY}" ]; then                # battery is too low ; don't make me appear ; charge it before reaching this condition
-  batteryIcon=$(echo "\uf57a")
+  batteryIcon=$(echo "\uf244")
 elif [ "${BATTERY}" -ge 25 ] && [ "${BATTERY}" -lt 50 ]; then # if battery is charged between 25 and 50
-  batteryIcon=$(echo "\uf57c")
+  batteryIcon=$(echo "\uf243")
 elif [ "${BATTERY}" -ge 50 ] && [ "${BATTERY}" -lt 60 ]; then # if battery is half charged
-  batteryIcon=$(echo "\uf57e")
+  batteryIcon=$(echo "\uf242")
 elif [ "${BATTERY}" -ge 60 ] && [ "${BATTERY}" -lt 95 ]; then # if battery is charged more than 60%
-  batteryIcon=$(echo "\uf581")
+  batteryIcon=$(echo "\uf241")
 else                                                          # if battery is full charged
-  batteryIcon=$(echo "\uf578")
+  batteryIcon=$(echo "\uf240")
 fi
 
 if acpi -a | grep -i "on-line" &> /dev/null; then # if AC adapter is online
@@ -35,14 +35,17 @@ if acpi -a | grep -i "off-line" &> /dev/null; then   # if AC adapter is offline
   if [ "${BATTERY}" -lt ${LOW_BATTERY} ]; then       # if battery is less than $LOW_BATTERY
     INFO+="<span weight='Bold' fgcolor='Red'>"       # make the text bold red
   elif [ "${BATTERY}" -gt 75 ]; then
-    INFO+="<span weight='Regular' fgcolor='Light Green'>"  #text appears green if the charge is above 75
+    INFO+="<span foreground=\"#cdffcd\">"  #text appears green if the charge is above 75
   else
-    INFO+="<span weight='Regular' fgcolor='White'>" # make the text white for normal states
+    INFO+="<span  fgcolor='White'>" # make the text white for normal states
   fi
 else # if the battery is getting charged
-  INFO+="<span weight='Regular' fgcolor='Light Green'>" # text is green while getting charged
+  INFO+="<span  foreground=\"#cdffcd\">" # text is green while getting charged
 fi
-INFO+="${batteryIcon} ${BATTERY}%"
+INFO+="${batteryIcon} "
+INFO+="</span>"
+INFO+="<span foreground=\"#fff\">"
+INFO+="${BATTERY}%"
 INFO+="</span>"
 INFO+="</txt>"
 
