@@ -1,0 +1,11 @@
+@import 'colors.css';
+
+/* Systray Theming */
+.xfce4-panel #systray-6 .horizontal {
+	background-color: #62568b;
+	padding-left: 5px;
+	padding-right: 5px;
+  color: #ffffff;
+}
+
+
