@@ -40,7 +40,7 @@ With XFCE4, you can do rice your panels like they do in Polybar, i3wm etc. GenMo
 - Copy the the required style (gtk_tx.css) and append to ~/.config/gtk-3.0/gtk.css
 - Find the appropriate genmon widget ids using the GTK inspector
 ```
-GTK_DEBUG = interactive xfce4-panel
+GTK_DEBUG=interactive xfce4-panel
 ```
 - Using font icons as Workspace switcher names to add to the look
 
