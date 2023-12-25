@@ -11,19 +11,19 @@ LOW_BATTERY=25;
 
 INFO=
 if [ "${BATTERY}" -lt "${LOW_BATTERY}" ]; then                # battery is too low ; don't make me appear ; charge it before reaching this condition
-  batteryIcon=$(echo "\uf244")
+  batteryIcon=$(echo "\uf244 ")
 elif [ "${BATTERY}" -ge 25 ] && [ "${BATTERY}" -lt 50 ]; then # if battery is charged between 25 and 50
-  batteryIcon=$(echo "\uf243")
+  batteryIcon=$(echo "\uf243 ")
 elif [ "${BATTERY}" -ge 50 ] && [ "${BATTERY}" -lt 60 ]; then # if battery is half charged
-  batteryIcon=$(echo "\uf242")
+  batteryIcon=$(echo "\uf242 ")
 elif [ "${BATTERY}" -ge 60 ] && [ "${BATTERY}" -lt 95 ]; then # if battery is charged more than 60%
-  batteryIcon=$(echo "\uf241")
+  batteryIcon=$(echo "\uf241 ")
 else                                                          # if battery is full charged
-  batteryIcon=$(echo "\uf240")
+  batteryIcon=$(echo "\uf240 ")
 fi
 
 if acpi -a | grep -i "on-line" &> /dev/null; then # if AC adapter is online
-    batteryIcon+=$(echo "  \uf0e7")                # adds a voltage icon next to battery
+    batteryIcon+=$(echo " \uf0e7")                # adds a voltage icon next to battery
 fi
 
 if hash xfce4-power-manager-settings &> /dev/null; then
@@ -42,6 +42,7 @@ if acpi -a | grep -i "off-line" &> /dev/null; then   # if AC adapter is offline
 else # if the battery is getting charged
   INFO+="<span  foreground=\"#cdffcd\">" # text is green while getting charged
 fi
+
 INFO+="${batteryIcon} "
 INFO+="</span>"
 INFO+="<span foreground=\"#fff\">"
@@ -58,7 +59,7 @@ CSS+=".genmon_valuebutton {
       padding-right:10px; 
       font-weight:bold;
     } 
-    .genmon_label {color:green}"
+    "
 CSS+="</css>"
 
 # Panel Print
