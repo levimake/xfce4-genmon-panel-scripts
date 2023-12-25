@@ -25,14 +25,12 @@ With XFCE4, you can do rice your panels like they do in Polybar, i3wm etc. GenMo
 
  - Download the Genmon scripts directory from this repo.
  - Add an XFCE Genmon plugin
- - Give the command as
- ```sh
- bash \path\to\our\script\script.sh
- ```
   - Hide the labels
   - Set the update period for the plugin accordingly
   - You are done setting up the plugins
   
+![](https://github.com/levimake/xfce4-genmon-panel-scripts/blob/main/screenshots/addPlugin.png)
+
  #### References
  See [xfce4-genmon-scripts](https://github.com/xtonousou/xfce4-genmon-scripts) by [xtonousou](https://github.com/xtonousou)
  - [xfce4-genmon css styling](https://git.xfce.org/panel-plugins/xfce4-genmon-plugin/tree/CSS%20Styling.txt)
