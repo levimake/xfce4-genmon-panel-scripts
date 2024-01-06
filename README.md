@@ -29,7 +29,8 @@ With XFCE4, you can do rice your panels like they do in Polybar, i3wm etc. GenMo
 
 - Font which supports emojis (eg: noto-fonts-emoji)
 - I used FiraCode Bold for the genmon plugins
-- xdotool
+- xdotool (For the window title)
+- wmctrl (For the workspace name script)
 
 ### Additional Information
 When using the volume genmon script and removing xfce pulseaudio plugin, the keyboard shortcuts for raising and lowering the volume levels will stop to work. Therefore, please add these shortcut keys to control the volume levels:
