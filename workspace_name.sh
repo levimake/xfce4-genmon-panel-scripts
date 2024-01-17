@@ -1,27 +1,15 @@
 #! /bin/bash
 
-#ws_count=$(xfconf-query -c xfwm4 -p /general/workspace_count)
-
-#get the array of workspace names
-ws_names=($(xfconf-query -c xfwm4 -p /general/workspace_names | tail -n+3))
-
-#get the current workspace number
-CURRENT_WORKSPACE=$(($(wmctrl -d | grep \* | cut -d' ' -f1)))
-
-# Panel
-INFO="<txt>"
-INFO+="${ws_names[CURRENT_WORKSPACE]}"
-INFO+="</txt>"
+# Pull column 10 (first word in worskpace name) till end of line from the line with an * (signifying current workspace) in the output of `wmctrl -d`
+CURRENT_WORKSPACE=$(wmctrl -d | awk '/\*/ {for (i=10; i<=NF; i++) printf "%s ", $i}')
 
 # CSS Styling
 CSS="<css>"
 CSS+="/* ADD YOUR CSS HERE */ }" 
 CSS+="</css>"
 
-
-# Panel Print
-echo -e "${INFO}"
+# Print the name of the current workspace encapsulated by `txt` tags for Genmon
+printf '<txt>%s</txt>' "$CURRENT_WORKSPACE"
 
 # Add Styling
 echo -e "${CSS}"
-
