@@ -28,8 +28,6 @@ INFO="<txt>"
 INFO+="${VOLUME}"
 INFO+="</txt>"
 
-INFO+="<txtclick></txtclick>"
-
 if command -v pavucontrol >/dev/null 2>&1; then
   INFO+="<txtclick>pavucontrol</txtclick>"     # clicking on the icon opens XFCE power manager
 fi
