@@ -1,16 +1,11 @@
 #! /bin/bash
 
-#ws_count=$(xfconf-query -c xfwm4 -p /general/workspace_count)
-
-#get the array of workspace names
-ws_names=($(xfconf-query -c xfwm4 -p /general/workspace_names | tail -n+3))
-
-#get the current workspace number
-CURRENT_WORKSPACE=$(($(wmctrl -d | grep \* | cut -d' ' -f1)))
+# Pull column 10 (first word in worskpace name) till end of line from the line with an * (signifying current workspace) in the output of `wmctrl -d`
+CURRENT_WORKSPACE=$(wmctrl -d | awk '/\*/ {for (i=10; i<=NF; i++) printf "%s ", $i}')
 
 # Panel
 INFO="<txt>"
-INFO+="${ws_names[CURRENT_WORKSPACE]}"
+INFO+="$CURRENT_WORKSPACE"
 INFO+="</txt>"
 
 # CSS Styling
@@ -18,10 +13,8 @@ CSS="<css>"
 CSS+="/* ADD YOUR CSS HERE */ }" 
 CSS+="</css>"
 
-
 # Panel Print
 echo -e "${INFO}"
 
 # Add Styling
 echo -e "${CSS}"
-
